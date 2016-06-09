@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Head by Konfuze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Head</h1>
+      <h2 class="project-tagline">Документация по всему, что может располагаться в теге &lt;head&gt; вашего документа</h2>
+      <a href="https://github.com/Konfuze/HEAD" class="btn">View on GitHub</a>
+      <a href="https://github.com/Konfuze/HEAD/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Konfuze/HEAD/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="head" class="anchor" href="#head" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HEAD</h1>
+
+<p>Документация по всему, что может располагаться в теге <code>&lt;head&gt;</code> вашего документа</p>
+
+<p>Перевод <a href="https://github.com/joshbuchea/HEAD">оригинального документа</a>.</p>
+
+<h2>
+<a id="Содержание" class="anchor" href="#%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Содержание</h2>
+
+<ul>
+<li><a href="#%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D0%BC%D1%8B%D0%B9-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D1%83%D0%BC">Рекомендуемый минимум</a></li>
+<li><a href="#%D0%A2%D0%B5%D0%B3%D0%B8">Теги</a></li>
+<li>
+<a href="#meta">Meta</a>
+
+<ul>
+<li><a href="#meta-%D0%9D%D0%B5-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D1%82%D1%81%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C">Meta: Не рекомендуется использовать</a></li>
+</ul>
+</li>
+<li>
+<a href="#link">Link</a>
+
+<ul>
+<li><a href="#link-%D0%9D%D0%B5-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D1%82%D1%81%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C">Link: Не рекомендуется использовать</a></li>
+<li><a href="#%D0%A4%D0%B0%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8">Фавиконки</a></li>
+</ul>
+</li>
+<li>
+<a href="#%D0%A1%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%81%D0%B5%D1%82%D0%B8">Социальные сети</a>
+
+<ul>
+<li><a href="#facebook--open-graph">Facebook / Open Graph</a></li>
+<li><a href="#facebook--instant-articles">Facebook / Instant Articles</a></li>
+<li><a href="#twitter">Twitter</a></li>
+<li><a href="#google--schemaorg">Google+ / Schema.org</a></li>
+<li><a href="#oembed">OEmbed</a></li>
+</ul>
+</li>
+<li>
+<a href="#%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B--%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">Браузеры / Операционные системы</a>
+
+<ul>
+<li><a href="#apple-ios">Apple iOS</a></li>
+<li><a href="#apple-safari">Apple Safari</a></li>
+<li><a href="#google-android">Google Android</a></li>
+<li><a href="#google-chrome">Google Chrome</a></li>
+<li><a href="#microsoft-internet-explorer">Microsoft Internet Explorer</a></li>
+<li><a href="#microsoft-internet-explorer-%D0%A3%D1%81%D1%82%D0%B0%D1%80%D0%B5%D0%B2%D1%88%D0%B5%D0%B5">Microsoft Internet Explorer: Устаревшее</a></li>
+</ul>
+</li>
+<li>
+<a href="#%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5">Браузеры (Китайские)</a>
+
+<ul>
+<li><a href="#360-browser">360 Browser</a></li>
+<li><a href="#qq-mobile-browser">QQ Mobile Browser</a></li>
+<li><a href="#uc-mobile-browser">UC Mobile Browser</a></li>
+</ul>
+</li>
+<li><a href="#%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F">Ссылки на мобильные приложения</a></li>
+<li>
+<a href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F">Примечания</a>
+
+<ul>
+<li><a href="#%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Производительность</a></li>
+</ul>
+</li>
+<li><a href="#%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8">Дополнительные ссылки</a></li>
+<li><a href="#%D0%A1%D1%85%D0%BE%D0%B6%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B">Схожие проекты</a></li>
+<li><a href="#%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%8B">Переводы</a></li>
+<li><a href="#%D0%9A%D0%BE%D0%BC%D0%BC%D1%8C%D1%8E%D0%BD%D0%B8%D1%82%D0%B8">Коммьюнити</a></li>
+<li><a href="#%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%8B">Авторы</a></li>
+<li><a href="#%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F">Лицензия</a></li>
+</ul>
+
+<h2>
+<a id="Рекомендуемый-минимум" class="anchor" href="#%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D0%BC%D1%8B%D0%B9-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D1%83%D0%BC" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Рекомендуемый минимум</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>x-ua-compatible<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>ie=edge<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>viewport<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>width=device-width, initial-scale=1<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Эти 3 тега *должны* быть указаны в начале тега `&lt;head&gt;` --&gt;</span>
+&lt;<span class="pl-ent">title</span>&gt;Заговоловок страницы&lt;/<span class="pl-ent">title</span>&gt;</pre></div>
+
+<h2>
+<a id="Теги" class="anchor" href="#%D0%A2%D0%B5%D0%B3%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Теги</h2>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Заговоловок страницы --&gt;</span>
+&lt;<span class="pl-ent">title</span>&gt;Заговоловок страницы&lt;/<span class="pl-ent">title</span>&gt;
+
+<span class="pl-c">&lt;!-- Базовый URL, который будет использоваться во всех относительных URL на странице --&gt;</span>
+&lt;<span class="pl-ent">base</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/page.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Внешний CSS --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>styles.css<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- CSS внутри документа --&gt;</span>
+<span class="pl-s1">&lt;<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-c">/* ... */</span></span>
+<span class="pl-s1">&lt;/<span class="pl-ent">style</span>&gt;</span>
+
+<span class="pl-c">&lt;!-- JavaScript --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>script.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="meta" class="anchor" href="#meta" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Meta</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>x-ua-compatible<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>ie=edge<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>viewport<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>width=device-width, initial-scale=1, shrink-to-fit=no<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Эти 3 meta-тега *должны* быть расположены первыми в `&lt;head&gt;` --&gt;</span>
+
+<span class="pl-c">&lt;!-- Позволяет указывать, откуда могут грузиться ресурсы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Content-Security-Policy<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>default-src 'self'<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Необходимо разместить как можно выше --&gt;</span>
+<span class="pl-c">&lt;!-- Правило применяется только к содержимому, следующему за этим тегом --&gt;</span>
+
+<span class="pl-c">&lt;!-- Имя веб-приложения (следует указывать только в случае, если сайт используется как приложение) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>application-name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Application Name<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Короткое описание страницы (ограничение — 150 символов) --&gt;</span>
+<span class="pl-c">&lt;!-- *Иногда* содержимое meta-тега `description` используется поисковыми системами как сниппет (короткое описание страницы) в выдате --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>description<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Описание страницы<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Контролирует поведение поисковых систем при индексации страницы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>robots<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>index,follow,noodp<span class="pl-pds">"</span></span>&gt;<span class="pl-c">&lt;!-- Все поисковые системы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>googlebot<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>index,follow<span class="pl-pds">"</span></span>&gt;<span class="pl-c">&lt;!-- Указание отдельно для Google --&gt;</span>
+
+<span class="pl-c">&lt;!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>google<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>nositelinkssearchbox<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Позволяет указать Google не предлагать перевести эту страницу --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>google<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>notranslate<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Подтверждает авторство страницы в Google Search Console --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>google-site-verification<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>verification_token<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Используется для указания ПО, которое сгенерировало эту страницу --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>generator<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>program<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Короткое описание тематики вашего сайта --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>subject<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>your website's subject<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Очень короткое предложение, описывающее назначение сайта --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>abstract<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Тематика вашего сайта --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>topic<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Краткое описание компании или предназначения сайта --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>summary<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Устаревший тег, который указывает на тоже самое, что и тег `keywords` --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>classification<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>business<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Полное доменное имя или адрес --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Тоже самое, что и предыдущий meta-тег, устаревшее и не поддерживается --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>identifier-URL<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/<span class="pl-pds">"</span></span>&gt;
+
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>directory<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>submission<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает на тоже самое, что и тег `keywords` --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>category<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Уточняет, что ваш сайт будет отображаться для всех стран и всех языков --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coverage<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Worldwide<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает на тоже, что и тег `coverage`--&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>distribution<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Global<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает что контент сайта соответствует возрастному рейтингу `General` --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>rating<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>General<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Позволяет контролировать процесс передачи реферальных данных  --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>referrer<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>never<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключает автоматическое определение и форматирование телефонных номеров --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>format-detection<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>telephone=no<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Geo-теги --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>ICBM<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>latitude, longitude<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>geo.position<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>latitude;longitude<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>geo.region<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>country[-state]<span class="pl-pds">"</span></span>&gt;<span class="pl-c">&lt;!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>geo.placename<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>city/town<span class="pl-pds">"</span></span>&gt;<span class="pl-c">&lt;!-- eg. content="New York City" --&gt;</span></pre></div>
+
+<ul>
+<li><a href="https://habrahabr.ru/company/nixsolutions/blog/271575/">Улучшение сетевой безопасности с помощью Content Security Policy</a></li>
+<li><a href="https://support.google.com/webmasters/answer/79812?hl=en">Meta tags that Google understands</a></li>
+<li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki: MetaExtensions</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ICBM_address#Modern_use">ICBM on Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Geotagging#HTML_pages">Geotagging on Wikipedia</a></li>
+</ul>
+
+<h3>
+<a id="meta-Не-рекомендуется-использовать" class="anchor" href="#meta-%D0%9D%D0%B5-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D1%82%D1%81%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Meta: Не рекомендуется использовать</h3>
+
+<p>Meta-теги, которые не рекомендуется использовать:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Тег использовался для указания языка страницы, но не поддерживается в полной мере. Рекомендуется использование &lt;html lang=""&gt; --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>language<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Google игнорирует это содержимое, а Bing расценивает это как признак спама --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>keywords<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>ключевые,слова,разделённые,запятыми,без,пробелов<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Нет подтверждения, что хотя бы одна поисковая система использует этот тег --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>revised<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Sunday, July 18th, 2010, 5:15 pm<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Даёт простой способ спам-ботам собирать email-адреса --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>reply-to<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>email@example.com<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Лучше использовать тег &lt;link rel="author"&gt; или файл humans.txt --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>author<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>name, email@example.com<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>designer<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>owner<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает поисковым ботам, когда нужно будет переиндексировать эту страницу. Не поддерживается, т. к. поисковые системы используют случайные интервалы для переиндексации страницы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>revisit-after<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>7 days<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает через сколько времени и на какой адрес браузер должен осуществить редирект --&gt;</span>
+<span class="pl-c">&lt;!-- W3C не рекомендует использование этого тега. Google рекомендует использовать 301 редирект на сервере --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>refresh<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>300; url=https://example.com/<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Управление кешированием --&gt;</span>
+<span class="pl-c">&lt;!-- Будет лучше, если вы настроите управление кешем на стороне сервера  --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Expires<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Pragma<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no-cache<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Cache-Control<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no-cache<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h2>
+<a id="link" class="anchor" href="#link" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Link</h2>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Позволяет избежать дублирование индексации контента --&gt;</span>
+<span class="pl-c">&lt;!-- http://www.searchengines.ru/kak_pravilno_is_rel_canonical.html --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>canonical<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/2010/06/9-things-to-do-before-entering-social-media.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Короткая ссылка на документ. Не рекомендуется к использованию, т. к. может порождать дубли страниц при индексации --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>shortlink<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/?p=42<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на AMP-версию --&gt;</span>
+<span class="pl-c">&lt;!-- https://support.google.com/webmasters/answer/6340290?hl=ru --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>amphtml<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/path/to/amp-version.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на CSS-файл --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/styles.css<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на JSON-файл, который описывает установку веб-приложения --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>manifest.json<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на автора документа --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>author<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>humans.txt<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Cсылка на страницу с авторскими правами, согласно которым предоставляется текущий документ --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>copyright<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>copyright.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на другую языковую версию документа --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>alternate<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://es.example.com/<span class="pl-pds">"</span></span> <span class="pl-e">hreflang</span>=<span class="pl-s"><span class="pl-pds">"</span>es<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Информация об авторе --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>me<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://google.com/profiles/thenextweb<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/html<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>me<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>mailto:name@example.com<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>me<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>sms:+15035550125<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на документ, который содержит архивную ссылку на текущий документ --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>archives<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/2003/05/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>May 2003<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на документ выше (относительно иерархии сайта) --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>Cassius Clay<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на начало текущего документа (например, на первую страницу статьи) --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/books/winnie_the_pooh/part1/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>Pattern Recognition 1<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на предыдущую страницу текущего документа --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>prev<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/opensearch/opensearch-and-openid-a-sure-way-to-get-my-attention/<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>OpenSearch and OpenID? A sure way to get my attention.<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на сам ресурс (ссылка "на себя"). Данная ссылка может, например, понадобиться для обращения к документу, если его описание было получено в составе коллекции --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>self<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/atom+xml<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/atomFeed.php?page=3<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Ссылка на первую, следующую, предыдущую и последнюю страницы документа --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>first<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/atomFeed.php<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>next<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/atomFeed.php?page=4<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>previous<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/atomFeed.php?page=2<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>last<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/atomFeed.php?page=147<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Используется когда используется сторонний сервис для редактирования блога --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>EditURI<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/xmlrpc.php?rsd<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/rsd+xml<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>RSD<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Указывает адрес пингбэк-сервера --&gt;</span>
+<span class="pl-c">&lt;!-- Как поясняется в спецификации, «пингбэк» это способ для блога автоматически оповещать сайты, ссылающиеся на него. Это создает обратную связь — способ пройти назад по цепочке ссылок вместо «прямого прохода». В блогах, частности WordPress, пингбэк-механизм используется для уведомления авторов, что вы ссылаетесь на кого-то при создании новой записи --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>pingback<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/xmlrpc.php<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Уведомляет URL, когда вы ссылаетесь на него на вашем сайте --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>webmention<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/webmention<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Загружает внешний HTML-файл в текущий файл --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>import<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>component.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Open Search --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>search<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>/open-search.xml<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/opensearchdescription+xml<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>Поисковый запрос<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Фиды --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>alternate<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://feeds.feedburner.com/example<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/rss+xml<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>RSS<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>alternate<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/feed.atom<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/atom+xml<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>Atom 0.3<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Prefetching, preloading, prebrowsing --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>dns-prefetch<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>//example.com/<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>preconnect<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://www.example.com/<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>prefetch<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://www.example.com/<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>prerender<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>subresource<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>styles.css<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>preload<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>image.png<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Больше информации: http://prgssr.ru/development/tehniki-prefetchinga-dlya-uluchsheniya-proizvoditelnosti-sajtov.html --&gt;</span></pre></div>
+
+<h3>
+<a id="link-Не-рекомендуется-использовать" class="anchor" href="#link-%D0%9D%D0%B5-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D1%82%D1%81%D1%8F-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Link: Не рекомендуется использовать</h3>
+
+<p>Link-теги, которые не рекомендуется использовать:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>shortcut icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon.ico<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="Фавиконки" class="anchor" href="#%D0%A4%D0%B0%D0%B2%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Фавиконки</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Для IE 10 и ниже --&gt;</span>
+<span class="pl-c">&lt;!-- Не используется ссылка, просто разместите файл, который называется favicon.ico в корне вашего сайта --&gt;</span>
+
+<span class="pl-c">&lt;!-- Для IE 11, Chrome, Firefox, Safari, Opera --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon-16.png<span class="pl-pds">"</span></span> <span class="pl-e">sizes</span>=<span class="pl-s"><span class="pl-pds">"</span>16x16<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>image/png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon-32.png<span class="pl-pds">"</span></span> <span class="pl-e">sizes</span>=<span class="pl-s"><span class="pl-pds">"</span>32x32<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>image/png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon-48.png<span class="pl-pds">"</span></span> <span class="pl-e">sizes</span>=<span class="pl-s"><span class="pl-pds">"</span>48x48<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>image/png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon-62.png<span class="pl-pds">"</span></span> <span class="pl-e">sizes</span>=<span class="pl-s"><span class="pl-pds">"</span>62x62<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>image/png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/favicon-192.png<span class="pl-pds">"</span></span> <span class="pl-e">sizes</span>=<span class="pl-s"><span class="pl-pds">"</span>192x192<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>image/png<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Больше информации: https://bitsofco.de/all-about-favicons-and-touch-icons/ --&gt;</span></pre></div>
+
+<ul>
+<li><a href="https://bitsofco.de/all-about-favicons-and-touch-icons/">All About Favicons (And Touch Icons)</a></li>
+<li><a href="https://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</a></li>
+</ul>
+
+<h2>
+<a id="Социальные-сети" class="anchor" href="#%D0%A1%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%81%D0%B5%D1%82%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Социальные сети</h2>
+
+<h3>
+<a id="facebook--open-graph" class="anchor" href="#facebook--open-graph" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Facebook / Open Graph</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>fb:app_id<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>123456789<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/page.html<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:type<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>website<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:title<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Content Title<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:image<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/image.jpg<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:description<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Description Here<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:site_name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Site Name<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>og:locale<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>en_US<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>article:author<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup --&gt;</span>
+<span class="pl-c">&lt;!-- Open Graph: http://ogp.me/ --&gt;</span></pre></div>
+
+<ul>
+<li><a href="https://developers.facebook.com/docs/sharing/webmasters#markup">Facebook Open Graph Markup</a></li>
+<li><a href="http://ogp.me/">Open Graph protocol</a></li>
+</ul>
+
+<h3>
+<a id="facebook--instant-articles" class="anchor" href="#facebook--instant-articles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Facebook / Instant Articles</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>utf-8<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>op:markup_version<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>v1.0<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- URL веб-версии этой страницы --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>canonical<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://example.com/article.html<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Стиль, используемый для этой страницы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>fb:article_style<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>myarticlestyle<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<ul>
+<li><a href="https://developers.facebook.com/docs/instant-articles/guides/articlecreate">Facebook Instant Articles: Creating Articles</a></li>
+<li><a href="https://developers.facebook.com/docs/instant-articles/reference">Instant Articles: Format Reference</a></li>
+</ul>
+
+<h3>
+<a id="twitter" class="anchor" href="#twitter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Twitter</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:card<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>summary<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:site<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>@site_account<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:creator<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>@individual_account<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/page.html<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:title<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Content Title<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:description<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Content description less than 200 characters<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter:image<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/image.jpg<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Больше информации: https://dev.twitter.com/cards/getting-started --&gt;</span>
+<span class="pl-c">&lt;!-- Валидация meta-тегов Twitter: https://dev.twitter.com/docs/cards/validation/validator --&gt;</span></pre></div>
+
+<ul>
+<li><a href="https://dev.twitter.com/cards/getting-started">Twitter Cards: Getting Started Guide</a></li>
+<li><a href="https://dev.twitter.com/docs/cards/validation/validator">Twitter Card Validator</a></li>
+</ul>
+
+<h3>
+<a id="google--schemaorg" class="anchor" href="#google--schemaorg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Google+ / Schema.org</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://plus.google.com/+YourPage<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>publisher<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">itemprop</span>=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Заголовок<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">itemprop</span>=<span class="pl-s"><span class="pl-pds">"</span>description<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Описание страницы, лимит — 200 символов<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">itemprop</span>=<span class="pl-s"><span class="pl-pds">"</span>image<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>https://example.com/image.jpg<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="oembed" class="anchor" href="#oembed" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OEmbed</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>alternate<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>application/json+oembed<span class="pl-pds">"</span></span>
+  <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F<span class="pl-c1">&amp;amp;</span>format=json<span class="pl-pds">"</span></span>
+  <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>oEmbed Profile: JSON<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>alternate<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/xml+oembed<span class="pl-pds">"</span></span>
+  <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>http://example.com/services/oembed?url=http%3A%2F%2Fexample.com%2Ffoo%2F<span class="pl-c1">&amp;amp;</span>format=xml<span class="pl-pds">"</span></span>
+  <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>oEmbed Profile: XML<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<ul>
+<li><a href="http://oembed.com/">oEmbed format</a></li>
+</ul>
+
+<h2>
+<a id="Браузеры--Операционные-системы" class="anchor" href="#%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B--%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Браузеры / Операционные системы</h2>
+
+<h3>
+<a id="apple-ios" class="anchor" href="#apple-ios" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Apple iOS</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Баннер для перехода на страницу приложения в AppStore --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-itunes-app<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключает автоматическое определение и форматирование телефонных номеров --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>format-detection<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>telephone=no<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Добавить на домашний экран --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-mobile-web-app-capable<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-mobile-web-app-status-bar-style<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-mobile-web-app-title<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>App Title<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Touch Icons --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-touch-icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/apple-touch-icon.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-touch-icon-precomposed<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/apple-touch-icon-precomposed.png<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- В большинстве случаев одной иконки размером 180×180px достаточно --&gt;</span>
+
+<span class="pl-c">&lt;!-- Изображение, отображаемое при загрузке --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>apple-touch-startup-image<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/startup.png<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Больше информации: https://developer.apple.com/safari/library/documentation/appleapplications/reference/safarihtmlref/articles/metatags.html --&gt;</span></pre></div>
+
+<ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Apple Meta Tags</a></li>
+</ul>
+
+<h3>
+<a id="apple-safari" class="anchor" href="#apple-safari" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Apple Safari</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Закреплённый сайт --&gt;</span>
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>mask-icon<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/icon.svg<span class="pl-pds">"</span></span> <span class="pl-e">color</span>=<span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="google-android" class="anchor" href="#google-android" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Google Android</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Цвет темы в Chrome --&gt;</span>
+<span class="pl-c">&lt;!-- https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android?hl=en --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>theme-color<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>#E64545<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Добавить на домашний экран --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>mobile-web-app-capable<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Больше информации: https://developer.chrome.com/multidevice/android/installtohomescreen --&gt;</span></pre></div>
+
+<h3>
+<a id="google-chrome" class="anchor" href="#google-chrome" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Google Chrome</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>chrome-webstore-item<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://chrome.google.com/webstore/detail/APP_ID<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключить предложение перевести страницу --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>google<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>notranslate<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="microsoft-internet-explorer" class="anchor" href="#microsoft-internet-explorer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsoft Internet Explorer</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>x-ua-compatible<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>ie=edge<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>cleartype<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>on<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>skype_toolbar<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>skype_toolbar_parser_compatible<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключает подсветку ссылок в IE 10 для Windows Phone (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-tap-highlight<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Закреплённые сайты (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>application-name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Contoso Pinned Site Caption<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-tooltip<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>Example Tooltip Text<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-starturl<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>/<span class="pl-pds">"</span></span>&gt;
+
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-config<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>http://example.com/browserconfig.xml<span class="pl-pds">"</span></span>&gt;
+
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-allowDomainApiCalls<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-allowDomainMetaTags<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-badge<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>frequency=30; polling-uri=http://example.com/id45453245/polling.xml<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-navbutton-color<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>#FF3300<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-notification<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>frequency=60;polling-uri=http://example.com/livetile<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-square150x150logo<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/logo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-square310x310logo<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/largelogo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-square70x70logo<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/tinylogo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-wide310x150logo<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/widelogo.png<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-task<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>name=Check Order Status;action-uri=./orderStatus.aspx?src=IE9;icon-uri=./favicon.ico<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-task-seperator<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-TileColor<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>#FF3300<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-TileImage<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>path/to/tileimage.jpg<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>msapplication-window<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>width=1024;height=768<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="microsoft-internet-explorer-Устаревшее" class="anchor" href="#microsoft-internet-explorer-%D0%A3%D1%81%D1%82%D0%B0%D1%80%D0%B5%D0%B2%D1%88%D0%B5%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsoft Internet Explorer: Устаревшее</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Отключает тулбар, отображаемый при наведении на изображение в IE 6 (https://msdn.microsoft.com/en-us/library/ms532986(v=vs.85).aspx) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>imagetoolbar<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключает применение темы Windows для полей ввода / кнопок (https://support.microsoft.com/en-us/kb/322240) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>MSThemeCompatible<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Отключает опцию, которая была доступна только в IE 6 beta (https://stackoverflow.com/q/2167301) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>MSSmartTagsPreventParsing<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-c">&lt;!-- Эффект перехода между страницами (https://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx) --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Page-Enter<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>revealtrans(duration=2,transition=2)<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Page-Exit<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>revealtrans(duration=3,transition=12)<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Site-Enter<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>revealtrans(duration=2,transition=2)<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">http-equiv</span>=<span class="pl-s"><span class="pl-pds">"</span>Site-Exit<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>revealtrans(duration=3,transition=12)<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h2>
+<a id="Ссылки-на-мобильные-приложения" class="anchor" href="#%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ссылки на мобильные приложения</h2>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- iOS --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:ios:url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>applinks://docs<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:ios:app_store_id<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>12345<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:ios:app_name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>App Links<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Android --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:android:url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>applinks://docs<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:android:app_name<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>App Links<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:android:package<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>org.applinks<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Web-фоллбек --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">property</span>=<span class="pl-s"><span class="pl-pds">"</span>al:web:url<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>http://applinks.org/documentation<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Больше информации: http://applinks.org/documentation/ --&gt;</span></pre></div>
+
+<ul>
+<li><a href="http://applinks.org/documentation/">App Links Docs</a></li>
+</ul>
+
+<h2>
+<a id="Браузеры-Китайские" class="anchor" href="#%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B-%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Браузеры (Китайские)</h2>
+
+<h3>
+<a id="360-browser" class="anchor" href="#360-browser" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>360 Browser</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Указывает движок рендеринга --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>renderer<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>webkit|ie-comp|ie-stand<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="qq-mobile-browser" class="anchor" href="#qq-mobile-browser" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>QQ Mobile Browser</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Блокирует изменение ориентации страницы, устанавливая указанную --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>x5-orientation<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>landscape/portrait<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Страница будет показана в полноэкранном режиме --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>x5-fullscreen<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Страница будет отображаться в режиме "Приложение" --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>x5-page-mode<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>app<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="uc-mobile-browser" class="anchor" href="#uc-mobile-browser" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UC Mobile Browser</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- Блокирует изменение ориентации страницы, устанавливая указанную --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>screen-orientation<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>landscape/portrait<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Страница будет показана в полноэкранном режиме --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>full-screen<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Браузер будет отображать изображения даже если включён "текстовый режим" --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>imagemode<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>force<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Страница будет отображаться в режиме "Приложение" --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>browsermode<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>application<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Отключает "ночной режим" для этой страницы --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>nightmode<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>disable<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Упрощает страницу для уменьшения потребления трафика --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>layoutmode<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>fitscreen<span class="pl-pds">"</span></span>&gt;
+<span class="pl-c">&lt;!-- Отключает опцию масштабирования шрифтов в случае, если на странице присутствует большое количество текста --&gt;</span>
+&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>wap-font-scale<span class="pl-pds">"</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<ul>
+<li><a href="http://www.uc.cn/download/UCBrowser_U3_API.doc">UC Browser Docs</a></li>
+</ul>
+
+<h2>
+<a id="Примечания" class="anchor" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Примечания</h2>
+
+<h3>
+<a id="Производительность" class="anchor" href="#%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Производительность</h3>
+
+<p>Перенос атрибута <code>href</code> в начало тега улучшает степерь сжатия, в случае, если используется GZIP. Это происходит потому что атрибует <code>href</code> используетсяв тегах <code>a</code>, <code>base</code> и <code>link</code>.</p>
+
+<p>Пример:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://fonts.googleapis.com/css?family=Open+Sans:400,700<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h2>
+<a id="Дополнительные-ссылки" class="anchor" href="#%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Дополнительные ссылки</h2>
+
+<ul>
+<li><a href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md">HTML5 Boilerplate Docs: The HTML</a></li>
+<li><a href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md">HTML5 Boilerplate Docs: Extend and customize</a></li>
+</ul>
+
+<h2>
+<a id="Схожие-проекты" class="anchor" href="#%D0%A1%D1%85%D0%BE%D0%B6%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Схожие проекты</h2>
+
+<ul>
+<li>
+<a href="https://github.com/joshbuchea/atom-html-head-snippets">HTML HEAD шаблоны для Atom</a> - Библиотека шаблонов тега <code>HEAD</code> для редактора Atom</li>
+<li>
+<a href="https://github.com/marcobiedermann/sublime-head-snippets">HTML HEAD шаблоны для Sublime Text</a> - Плагин с шаблонами тега <code>HEAD</code> для Sublime Text</li>
+<li>
+<a href="https://github.com/hemanth/head-it">head-it</a> - CLI-утилита, генерирующая шаблоны тега <code>HEAD</code>
+</li>
+<li>
+<a href="https://github.com/ktquez/vue-head">vue-head</a> - Управление мета-информацией тега <code>HEAD</code> для Vue.js</li>
+</ul>
+
+<h2>
+<a id="Переводы" class="anchor" href="#%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Переводы</h2>
+
+<ul>
+<li>
+<a href="https://github.com/joshbuchea/HEAD">Английский</a> (оригинал)</li>
+<li><a href="http://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html">Японский</a></li>
+</ul>
+
+<h2>
+<a id="Коммьюнити" class="anchor" href="#%D0%9A%D0%BE%D0%BC%D0%BC%D1%8C%D1%8E%D0%BD%D0%B8%D1%82%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Коммьюнити</h2>
+
+<p>Вы можете дополнить или откорректировать этот документ открыв pull request или создав issue. </p>
+
+<h3>
+<a id="Участники" class="anchor" href="#%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Участники</h3>
+
+<p><a href="https://github.com/joshbuchea/HEAD/graphs/contributors">Люди</a>, принявшие участие в создании оригинального документа.</p>
+
+<h2>
+<a id="Авторы" class="anchor" href="#%D0%90%D0%B2%D1%82%D0%BE%D1%80%D1%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Авторы</h2>
+
+<ul>
+<li>
+<strong><a href="http://joshbuchea.com/">Josh Buchea</a></strong> — оригинальный документ</li>
+<li>
+<strong><a href="https://github.com/konfuze">Артём Корсунов</a></strong> — русский перевод</li>
+</ul>
+
+<h2>
+<a id="Лицензия" class="anchor" href="#%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Лицензия</h2>
+
+<p><a href="LICENSE">Лицензия CC0</a></p>
+
+<p><img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" alt="CC0" title="CC0"></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Konfuze/HEAD">Head</a> is maintained by <a href="https://github.com/Konfuze">Konfuze</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
