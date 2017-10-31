@@ -259,7 +259,7 @@ Meta-теги, которые не рекомендуется использов
 <!-- Ссылка на первую, следующую, предыдущую и последнюю страницы документа -->
 <link rel="first" href="https://example.com/atomFeed.php">
 <link rel="next" href="https://example.com/atomFeed.php?page=4">
-<link rel="previous" href="https://example.com/atomFeed.php?page=2">
+<link rel="prev" href="https://example.com/atomFeed.php?page=2">
 <link rel="last" href="https://example.com/atomFeed.php?page=147">
 
 <!-- Используется когда используется сторонний сервис для редактирования блога -->
