@@ -588,14 +588,11 @@ Link-теги, которые не рекомендуется использов
 - [PDF](https://gitprint.com/konfuze/HEAD/blob/master/README.md)
 
 ## Переводы
-
-- 🇺🇸 [Английский](https://github.com/joshbuchea/HEAD) (оригинал)
-- 🇧🇷 [Бразильский вариант португальского языка](https://github.com/Webschool-io/HEAD)
-- 🇨🇳 [Китайский (упрощенный)](https://github.com/Amery2010/HEAD)
-- 🇮🇹 [Итальянский](https://github.com/Fakkio/HEAD)
-- 🇯🇵 [Японский](http://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
-- 🇰🇷 [Корейский](https://github.com/Lutece/HEAD)
-- 🇹🇷 [Турецкий](https://github.com/mkg0/HEAD)
+- [Английский](https://github.com/joshbuchea/HEAD) (оригинал)
+- [Японский](http://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
+- [Русский](https://github.com/Konfuze/HEAD)
+- [Португальский](https://github.com/Webschool-io/HEAD)
+- [Японский](http://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
 
 ## Коммьюнити
 
